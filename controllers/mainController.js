@@ -15,6 +15,9 @@ getMain : async (req, res) =>  {
 
 
 
+        res.render("index.ejs")
+
+
     }catch(err){
 
         console.log(err)
