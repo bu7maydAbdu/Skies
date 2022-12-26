@@ -1,5 +1,5 @@
 const express = require("express")
-import {fetch, Request, Response} from "undici"
+const {fetch, Request, Response} = require("undici")
 
 
 
@@ -12,34 +12,40 @@ import {fetch, Request, Response} from "undici"
 
 
 
-module.exports =  {
+
+module.exports = {
+     getMain : async (req, res) =>  {
 
 
-getMain : async (req, res) =>  {
-
-
-try {
-
-
-
-
-  
-  
-  
+        try {
+        
+        
+            const nsa = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.API_KEY}`)
+        
+            const data = await nsa.json()
+        
+            console.log(data)
+        
           
-  
-          res.render("index.ejs")
-}catch(err){
-    console.log(err)
+          
+          
+                  
+          
+                  res.render("index.ejs")
+        }catch(err){
+            console.log(err)
+        }
+            
+        
+        
+        
+          
+        
+        
+        }
 }
-    
 
 
 
-  
 
 
-}
-
-
-}

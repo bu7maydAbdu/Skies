@@ -2,7 +2,7 @@ const express = require("express")
 const PORT = 8000
 const app = express()
 const cors = require("cors")
-const mainRoute = require("./routes/main")
+const mainRoute = require("./routes/main.js")
 require('dotenv').config({path: './config/.env'})
 
 
