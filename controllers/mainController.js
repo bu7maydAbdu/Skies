@@ -31,7 +31,7 @@ module.exports = {
           
                   
           
-                  res.render("index.ejs")
+                  res.render("index.ejs" , {spaceData : data})
         }catch(err){
             console.log(err)
         }
