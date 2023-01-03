@@ -19,6 +19,13 @@ infoBtn.addEventListener("click", showScreen)
 
 
 function showScreen (){
+    
     const explanationScreen = document.querySelector(".explanation-screen")
-    explanationScreen.classList.remove("none")
+    if(explanationScreen.classList.contains("none")){
+        explanationScreen.classList.remove("none")
+    }else {
+        explanationScreen.classList.add("none")
+
+    }
+    
 }
